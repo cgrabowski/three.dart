@@ -8,7 +8,7 @@ import "package:three/three.dart";
 
 var crossOrigin = 'anonymous';
 
-Texture loadTexture(String url, {mapping, Function onLoad(Texture texture), Function onError(String message)}) {
+Texture loadTexture(String url, {mapping, void onLoad(Texture texture), void onError(String message)}) {
 
   var image = new ImageElement();
   var texture = new Texture(image, mapping);
@@ -37,7 +37,7 @@ Texture loadTexture(String url, {mapping, Function onLoad(Texture texture), Func
 
 }
 
-Texture loadCompressedTexture(String url, {mapping, Function onLoad(Texture texture), Function
+Texture loadCompressedTexture(String url, {mapping, void onLoad(Texture texture), void
     onError(ProgressEvent e)}) {
 
   var texture = new CompressedTexture();
@@ -79,7 +79,7 @@ Texture loadCompressedTexture(String url, {mapping, Function onLoad(Texture text
 }
 
 
-Texture loadTextureCube(List<String> array, [mapping, Function onLoad()]) {
+Texture loadTextureCube(List<String> array, [mapping, void onLoad()]) {
 
   var i, l;
   l = array.length;
