@@ -64,6 +64,8 @@ class ShaderMaterial extends Material implements Morphing, Skinning, Wireframe {
     needsUpdate = true;
   }
 
+  Map<String, Uniform> get uniforms => _uniforms;
+
   set uniforms(Map<String, Uniform> value) {
     _uniforms = value;
     needsUpdate = true;
